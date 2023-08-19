@@ -1,27 +1,13 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 
-import Counter from "~/components/starter/counter/counter";
 import Hero from "~/components/starter/hero/hero";
 import Infobox from "~/components/starter/infobox/infobox";
-import Starter from "~/components/starter/next-steps/next-steps";
 
 export default component$(() => {
   return (
     <>
       <Hero />
-      <Starter />
-
-      <div role="presentation" class="ellipsis"></div>
-      <div role="presentation" class="ellipsis ellipsis-purple"></div>
-
-      <div class="container container-center container-spacing-xl">
-        <h3>
-          You can <span class="highlight">count</span>
-          <br /> on me
-        </h3>
-        <Counter />
-      </div>
 
       <div class="container container-flex">
         <Infobox>
@@ -52,61 +38,72 @@ export default component$(() => {
           </>
         </Infobox>
 
-        <div>
-          <Infobox>
-            <div q:slot="title" class="icon icon-apps">
-              Example Apps
-            </div>
-            <p>
-              Have a look at the <a href="/demo/flower">Flower App</a> or the{" "}
-              <a href="/demo/todolist">Todo App</a>.
-            </p>
-          </Infobox>
-
-          <Infobox>
-            <div q:slot="title" class="icon icon-community">
-              Community
-            </div>
+        <Infobox>
+          <div q:slot="title" class="icon icon-apps">
+            Example Apps
+          </div>
+          <div>
+            Have a look at the{" "}
             <ul>
               <li>
-                <span>Questions or just want to say hi? </span>
-                <a href="https://qwik.builder.io/chat" target="_blank">
-                  Chat on discord!
-                </a>
+                <a href="/demo/flower">Flower App</a>
               </li>
               <li>
-                <span>Follow </span>
-                <a href="https://twitter.com/QwikDev" target="_blank">
-                  @QwikDev
-                </a>
-                <span> on Twitter</span>
+                <a href="/demo/todolist">Todo App</a>
               </li>
               <li>
-                <span>Open issues and contribute on </span>
-                <a href="https://github.com/BuilderIO/qwik" target="_blank">
-                  GitHub
-                </a>
+                <a href="/demo/counter">Counter App</a>
               </li>
               <li>
-                <span>Watch </span>
-                <a href="https://qwik.builder.io/media/" target="_blank">
-                  Presentations, Podcasts, Videos, etc.
-                </a>
+                <a href="/demo/jokes">Jokes App</a>.
               </li>
             </ul>
-          </Infobox>
-        </div>
+          </div>
+        </Infobox>
+        
+        <Infobox>
+          <div q:slot="title" class="icon icon-community">
+            Let's Connect!
+          </div>
+          <ul>
+            <li>
+              <span>Questions or just want to say hi? </span>
+              <a href="https://discord.com/n11klaus" target="_blank">
+                Chat on discord!
+              </a>
+            </li>
+            <li>
+              <span>Follow </span>
+              <a href="https://linkedin.com/in/nicknyanjui" target="_blank">
+                Linkedin
+              </a>
+            </li>
+            <li>
+              <span>Follow </span>
+              <a href="https://twitter.com/uncle_saitama" target="_blank">
+                @uncle_saitama
+              </a>
+              <span> on X</span>
+            </li>
+            <li>
+              <span>Connect on </span>
+              <a href="https://github.com/n1klaus" target="_blank">
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </Infobox>
       </div>
     </>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "HomePage",
   meta: [
     {
       name: "description",
-      content: "Qwik site description",
+      content: "Home Page description",
     },
   ],
 };
