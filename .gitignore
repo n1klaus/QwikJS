@@ -39,3 +39,7 @@ lerna-debug.log*
 # Yarn
 .yarn/*
 !.yarn/releases
+
+# Miscellanous
+SETUP.md
+package-lock.json

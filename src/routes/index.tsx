@@ -60,7 +60,7 @@ export default component$(() => {
             </ul>
           </div>
         </Infobox>
-        
+
         <Infobox>
           <div q:slot="title" class="icon icon-community">
             Let's Connect!

@@ -46,26 +46,26 @@ export default component$(() => {
       <div class="container container-center">
         <p>{dadJokeSignal.value.joke}</p>
         <div class="container container-flex">
-            <button
-                onClick$={() => {
-                    isFavoriteSignal.value = !isFavoriteSignal.value;
-                }}
-                >
-                {isFavoriteSignal.value ? "❤️" : "🤍"}
+          <button
+            onClick$={() => {
+              isFavoriteSignal.value = !isFavoriteSignal.value;
+            }}
+          >
+            {isFavoriteSignal.value ? "❤️" : "🤍"}
+          </button>
+          <Form action={favoriteJokeAction}>
+            <input
+              type="hidden"
+              name="jokeId"
+              value={dadJokeSignal.value.id}
+            ></input>
+            <button name="vote" value="up">
+              👍
             </button>
-            <Form action={favoriteJokeAction}>
-                <input
-                    type="hidden"
-                    name="jokeId"
-                    value={dadJokeSignal.value.id}
-                ></input>
-                <button name="vote" value="up">
-                    👍
-                </button>
-                <button name="vote" value="down">
-                    👎
-                </button>
-            </Form>
+            <button name="vote" value="down">
+              👎
+            </button>
+          </Form>
         </div>
       </div>
     </section>
