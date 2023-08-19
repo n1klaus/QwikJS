@@ -18,6 +18,10 @@ jobs:
               uses: actions/setup-node@v2
               with:
                   node-version: 18.x
+            - name: npm ci
+              run: npm ci
+            - name: test
+              run: npm test
             - name: prettier format
               run: npm run fmt
             - name: eslint format
