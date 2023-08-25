@@ -22,7 +22,7 @@
     "preview": "qwik build preview && vite preview --open",
     "serve": "wrangler pages dev ./dist",
     "start": "vite --open --mode ssr",
-    "test": "tsc --noEmit --incremental",
+    "test": "tsc --noEmit",
     "qwik": "qwik"
   },
   "devDependencies": {
