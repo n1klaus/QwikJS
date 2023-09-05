@@ -42,4 +42,10 @@ lerna-debug.log*
 
 # Miscellanous
 SETUP.md
-package-lock.json
+google-cloud-*
+
+# Cloudflare
+functions/**/*.js
+
+# Vercel
+.vercel

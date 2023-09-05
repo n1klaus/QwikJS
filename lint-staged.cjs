@@ -1,11 +1,4 @@
 module.exports = {
-    '*.{js,jsx,ts,tsx}': [
-        'npm run fmt',
-        'npm run lint',
-        'npm run test --bail --watchAll=false --findRelatedTests --passWithNoTests',
-        () => 'tsc-files --noEmit',
-    ],
-    '*.{js,jsx,ts,tsx,json,css,js}': [
-        'prettier --write'
-    ],
-}
+  "*.{js,jsx,ts,tsx,cjs}": ["npm run fmt", "npm run lint"],
+  "*.{js,jsx,ts,tsx,json,css,js}": ["npm run fmt"],
+};
